@@ -12,7 +12,13 @@
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
-    
+
+    <!-- Paging -->
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+    <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+
+
  <!-- Latest compiled and minified CSS -->
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -66,7 +72,7 @@
           
           <h2 class="sub-header">도서목록</h2>
           <div class="table-responsive">
-            <table class="table table-striped">
+            <table class="table table-striped" id ="example" cellpadding="0">
               <thead>
                 <tr>
                   <th>책표지</th>
@@ -76,7 +82,7 @@
 
                 </tr>
               </thead>
-              <tbody id ="table">
+              <tbody id ="tablePage">
                 <tr class = "tr">
                   <td id="img"><img width="80" /></td>
                   <td id="title"></td>
@@ -86,7 +92,11 @@
                
               </tbody>
             </table>
+
           </div>
+          <div class="col-md-12 text-center">
+              <ul class="pagination pagination-lg pager" id="myPager"></ul>
+        </div>
         </div>
       </div>
     </div>
